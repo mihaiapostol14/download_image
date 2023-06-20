@@ -4,7 +4,8 @@ from icrawler.builtin import GoogleImageCrawler
 
 keyword = input('Enter keyword: \n')
 max_num = int(input('Enter max num downloading photo: \n'))
-path_download = os.path.join('C:', 'Users', os.getlogin(), 'Downloads')
+path_download = os.path.join('C:', 'Users', os.getlogin(),
+                             'Downloads')  # todo: here we get absolute path to download directory
 
 
 def download_image():
