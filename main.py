@@ -4,16 +4,13 @@ from icrawler.builtin import GoogleImageCrawler
 
 keyword = input('Enter keyword: \n')
 max_num = int(input('Enter max num downloading photo: \n'))
-path_download = os.path.join('C:', 'Users', os.getlogin(),
-                             'Downloads')  # todo: here we get absolute path to download directory
-
 
 def download_image():
     # todo: This statement will be to create folder if she was not created
-    if not os.path.exists(f'{path_download}/{keyword}'):
-        os.mkdir(f'{path_download}/{keyword}')
+    if not os.path.exists(f'{keyword}'):
+        os.mkdir(keyword)
 
-    google_crawler = GoogleImageCrawler(storage={'root_dir': f'{path_download}/{keyword}'})
+    google_crawler = GoogleImageCrawler(storage={'root_dir': f'{keyword}'})
     google_crawler.crawl(keyword=keyword, max_num=max_num)
 
     if os.path.exists(keyword):
