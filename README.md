@@ -2,12 +2,29 @@
 
 **Steps by run project**
 
-1. Cloning project or download archive
- ````git
- git clone "https://github.com/programmer20000/download_image.git"
- ````
+## 1 **Clone Git Repository**
+To clone the repository and use this project locally, run the following command in your terminal:
+ ```bash
+ git clone https://github.com/mihaiapostol14/download_image.git
+ ```
 
-2. For creating virtual environment and install requirements follow links
-* [creating virtual environment on windows](https://www.geeksforgeeks.org/creating-python-virtual-environment-windows-linux/)
-* [creating virtual environment on linux](https://www.geeksforgeeks.org/creating-python-virtual-environment-windows-linux/)
-* [install requirements](https://www.geeksforgeeks.org/how-to-install-python-packages-with-requirements-txt/)
+## 2 Setup and Execution  
+
+### 1. Create and Activate a Virtual Environment  
+
+```bash
+# Moving to project directory
+cd download_image
+# Create a virtual environment
+python -m venv venv  
+
+# Activate the virtual environment
+source venv/bin/activate  # Linux/MacOS  
+venv\Scripts\activate     # Windows  
+```
+
+### 2. Install the all requirements
+
+```bash
+pip install -r requirements.txt
+```
